@@ -1,0 +1,24 @@
+global:
+  acme:
+    domain: steadops.local.steadforce.com
+
+trino:
+  resources:
+    limits: 
+      cpu: 200m
+      memory: 250Mi
+    requests:
+      cpu: 100m
+      memory: 125Mi
+  livenessProbe: 
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 6
+    successThreshold: 1
+  readinessProbe:
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 6
+    successThreshold: 1
