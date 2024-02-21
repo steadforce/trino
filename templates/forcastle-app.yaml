@@ -5,4 +5,5 @@ metadata:
 spec:
   name: {{ .Values.subDomain }}
   group: steadforce-infrastructure
+  icon: https://trino.io/assets/images/trino-logo/trino-ko_tiny-alt.svg
   url: https://{{ .Values.subDomain }}.{{ .Values.global.acme.domain }}
