@@ -1,6 +1,10 @@
 global:
   acme:
     domain: steadops.local.steadforce.com
+  istio:
+    ingressGateway:
+      namespace: istio-ingress
+subDomain: trino
 
 trino:
   resources:
