@@ -31,5 +31,5 @@ trino:
     kafka: |-
       connector.name=kafka
       kafka.nodes=kafka-kafka-bootstrap.kafka.svc.cluster.local:9092
-      kafka.table-names=tools
+      kafka.table-names=steadforce.tools
       kafka.hide-internal-columns=false
