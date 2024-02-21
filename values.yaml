@@ -30,6 +30,6 @@ trino:
   additionalCatalogs:
     kafka: |-
       connector.name=kafka
-      kafka.nodes=kafka-kafka-0.kafka.svc.cluster.local:9094
-      kafka.table-names=demo-topic
+      kafka.nodes=kafka-kafka-bootstrap.kafka.svc.cluster.local:9092
+      kafka.table-names=tools
       kafka.hide-internal-columns=false
