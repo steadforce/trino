@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "trino.name" . }}-headless-coordinator
+  namespace: {{ .Release.Namespace }}
+spec:
+  clusterIP: None
+  ports:
+    - name: tcp-trino
+      port: {{ .Values.trino.service.port }}
+      protocol: TCP
+  selector:
+    app: {{ template "trino.name" . }}
+    component: coordinator
+  type: ClusterIP

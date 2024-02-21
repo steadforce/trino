@@ -24,11 +24,34 @@ for details.
 
 The following command renders the charts like argo-cd does to validate the content.
 
+### local
 
 ```
  helm template --release-name trino -n trino --skip-tests \
-  -f values.yaml \
+  -a networking.istio.io/v1beta1 \
+  -a forecastle.stakater.com/v1alpha1 \
+  -f values-local.yaml \
   --output-dir _render/local . 
+```
+
+### dev
+
+```
+ helm template --release-name trino -n trino --skip-tests \
+  -a networking.istio.io/v1beta1 \
+  -a forecastle.stakater.com/v1alpha1 \
+  -f values-development.yaml \
+  --output-dir _render/dev . 
+```
+
+### prod
+
+```
+ helm template --release-name trino -n trino --skip-tests \
+  -a networking.istio.io/v1beta1 \
+  -a forecastle.stakater.com/v1alpha1 \
+  -f values-production.yaml \
+  --output-dir _render/prod . 
 ```
 
 You can use this command to check if the output is as you expect. The `-a` parameters are needed since we use the
