@@ -4,6 +4,7 @@ global:
   istio:
     ingressGateway:
       namespace: istio-ingress
+      
 subDomain: trino
 
 trino:
@@ -26,3 +27,9 @@ trino:
     timeoutSeconds: 5
     failureThreshold: 6
     successThreshold: 1
+  additionalCatalogs:
+    kafka: |-
+      connector.name=kafka
+      kafka.nodes=kafka-kafka-0.kafka.svc.cluster.local:9094
+      kafka.table-names=demo-topic
+      kafka.hide-internal-columns=false
