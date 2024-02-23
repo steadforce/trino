@@ -30,6 +30,7 @@ The following command renders the charts like argo-cd does to validate the conte
  helm template --release-name trino -n trino --skip-tests \
   -a networking.istio.io/v1beta1 \
   -a forecastle.stakater.com/v1alpha1 \
+  -a networking.istio.io/v1beta1 \
   -f values-local.yaml \
   --output-dir _render/local . 
 ```
@@ -40,6 +41,7 @@ The following command renders the charts like argo-cd does to validate the conte
  helm template --release-name trino -n trino --skip-tests \
   -a networking.istio.io/v1beta1 \
   -a forecastle.stakater.com/v1alpha1 \
+  -a security.istio.io/v1beta1 \
   -f values-development.yaml \
   --output-dir _render/dev . 
 ```
@@ -50,6 +52,7 @@ The following command renders the charts like argo-cd does to validate the conte
  helm template --release-name trino -n trino --skip-tests \
   -a networking.istio.io/v1beta1 \
   -a forecastle.stakater.com/v1alpha1 \
+  -a security.istio.io/v1beta1 \
   -f values-production.yaml \
   --output-dir _render/prod . 
 ```
