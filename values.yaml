@@ -49,9 +49,9 @@ trino:
       valueFrom:
         secretKeyRef:
           name: minio-cred-secret-mirror
-          key: accessKey
+          key: accesskey
     - name: MINIO_SECRET_KEY
       valueFrom:
         secretKeyRef:
           name: minio-cred-secret-mirror
-          key: secretKey
+          key: secretkey
