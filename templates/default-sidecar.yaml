@@ -9,4 +9,5 @@ spec:
     - "./*"
     - "istio-system/*"
     - "hive-metastore/*"
+    - "minio/*"
 {{ end }}
