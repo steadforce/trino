@@ -13,8 +13,8 @@ trino:
   coordinator:
     resources:
       limits: 
-        cpu: 200m
-        memory: 250Mi
+        cpu: 400m
+        memory: 500Mi
       requests:
         cpu: 100m
         memory: 125Mi
