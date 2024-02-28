@@ -35,8 +35,8 @@ trino:
   worker:
     resources:
       limits: 
-        cpu: 200m
-        memory: 250Mi
+        cpu: 1000m
+        memory: 1000Mi
       requests:
         cpu: 100m
         memory: 125Mi
