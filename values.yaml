@@ -19,13 +19,13 @@ trino:
         cpu: 100m
         memory: 125Mi
     livenessProbe: 
-      initialDelaySeconds: 20
+      initialDelaySeconds: 60
       periodSeconds: 10
       timeoutSeconds: 5
       failureThreshold: 6
       successThreshold: 1
     readinessProbe:
-      initialDelaySeconds: 20
+      initialDelaySeconds: 60
       periodSeconds: 10
       timeoutSeconds: 5
       failureThreshold: 6
@@ -39,13 +39,13 @@ trino:
         cpu: 100m
         memory: 125Mi
     livenessProbe: 
-      initialDelaySeconds: 20
+      initialDelaySeconds: 60
       periodSeconds: 10
       timeoutSeconds: 5
       failureThreshold: 6
       successThreshold: 1
     readinessProbe:
-        initialDelaySeconds: 20
+        initialDelaySeconds: 60
         periodSeconds: 10
         timeoutSeconds: 5
         failureThreshold: 6
