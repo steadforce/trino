@@ -10,25 +10,46 @@ subDomain: trino
 trino:
   image:
     tag: 432
-  resources:
-    limits: 
-      cpu: 200m
-      memory: 250Mi
-    requests:
-      cpu: 100m
-      memory: 125Mi
-  livenessProbe: 
-    initialDelaySeconds: 20
-    periodSeconds: 10
-    timeoutSeconds: 5
-    failureThreshold: 6
-    successThreshold: 1
-  readinessProbe:
-    initialDelaySeconds: 20
-    periodSeconds: 10
-    timeoutSeconds: 5
-    failureThreshold: 6
-    successThreshold: 1
+  server:
+    resources:
+      limits: 
+        cpu: 200m
+        memory: 250Mi
+      requests:
+        cpu: 100m
+        memory: 125Mi
+    livenessProbe: 
+      initialDelaySeconds: 20
+      periodSeconds: 10
+      timeoutSeconds: 5
+      failureThreshold: 6
+      successThreshold: 1
+    readinessProbe:
+      initialDelaySeconds: 20
+      periodSeconds: 10
+      timeoutSeconds: 5
+      failureThreshold: 6
+      successThreshold: 1
+  worker:
+    resources:
+      limits: 
+        cpu: 200m
+        memory: 250Mi
+      requests:
+        cpu: 100m
+        memory: 125Mi
+    livenessProbe: 
+      initialDelaySeconds: 20
+      periodSeconds: 10
+      timeoutSeconds: 5
+      failureThreshold: 6
+      successThreshold: 1
+    readinessProbe:
+        initialDelaySeconds: 20
+        periodSeconds: 10
+        timeoutSeconds: 5
+        failureThreshold: 6
+        successThreshold: 1
   additionalCatalogs:
     kafka: |-
       connector.name=kafka
