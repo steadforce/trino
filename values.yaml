@@ -9,7 +9,7 @@ subDomain: trino
 
 trino:
   image:
-    tag: 439
+    tag: 432
   resources:
     limits: 
       cpu: 200m
@@ -39,12 +39,15 @@ trino:
       connector.name=iceberg
       iceberg.catalog.type=nessie
       iceberg.nessie-catalog.uri=http://nessie.nessie.svc.cluster.local:19120/api/v1
-      iceberg.nessie-catalog.default-warehouse-dir=s3a://nessie
-      s3.path-style-access=true
-      s3.endpoint=http://minio.minio.svc.cluster.local:9000
-      s3.aws-access-key=${ENV:MINIO_ACCESS_KEY}
-      s3.aws-secret-key=${ENV:MINIO_SECRET_KEY}
+      iceberg.nessie-catalog.default-warehouse-dir=s3a://steadforce/iceberg
+      iceberg.nessie-catalog.ref=main
+      iceberg.register-table-procedure.enabled=true
       iceberg.file-format=PARQUET
+      hive.s3.path-style-access=true
+      hive.s3.endpoint=http://minio.minio.svc.cluster.local:9000
+      hive.s3.aws-access-key=${ENV:MINIO_ACCESS_KEY}
+      hive.s3.aws-secret-key=${ENV:MINIO_SECRET_KEY}
+      hive.s3.ssl.enabled=false
   env:
     - name: MINIO_ACCESS_KEY
       valueFrom:
