@@ -10,7 +10,7 @@ subDomain: trino
 trino:
   image:
     tag: 432
-  server:
+  coordinator:
     resources:
       limits: 
         cpu: 200m
