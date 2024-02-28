@@ -37,7 +37,7 @@ trino:
       connector.name=iceberg
       iceberg.catalog.type=nessie
       iceberg.nessie-catalog.uri=http://nessie.nessie.svc.cluster.local:19120/api/v1
-      iceberg.nessie-catalog.default-warehouse-dir=/tmp
+      iceberg.nessie-catalog.default-warehouse-dir=s3a://nessie
       hive.s3.path-style-access=true
       hive.s3.endpoint=http://minio.minio.svc.cluster.local:9000
       hive.s3.aws-access-key=${ENV:MINIO_ACCESS_KEY}
