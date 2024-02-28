@@ -45,7 +45,8 @@ trino:
       hive.allow-drop-table=true
     iceberg: |-
       connector.name=iceberg
-      hive.metastore.uri=thrift://hive-metastore.hive-metastore.svc.cluster.local:9083
+      iceberg.catalog.type=nessie
+      hive.metastore.uri=http://nessie.nessie.svc.cluster.local:19120
       hive.s3.path-style-access=true
       hive.s3.endpoint=http://minio.minio.svc.cluster.local:9000
       hive.s3.aws-access-key=${ENV:MINIO_ACCESS_KEY}
