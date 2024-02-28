@@ -33,20 +33,11 @@ trino:
       kafka.nodes=kafka-kafka-bootstrap.kafka.svc.cluster.local:9092
       kafka.table-names=steadforce.tools
       kafka.hide-internal-columns=false
-    hive: |-
-      connector.name=hive
-      hive.metastore.uri=thrift://hive-metastore.hive-metastore.svc.cluster.local:9083
-      hive.s3.path-style-access=true
-      hive.s3.endpoint=http://minio.minio.svc.cluster.local:9000
-      hive.s3.aws-access-key=${ENV:MINIO_ACCESS_KEY}
-      hive.s3.aws-secret-key=${ENV:MINIO_SECRET_KEY}
-      hive.non-managed-table-writes-enabled=true
-      hive.storage-format=ORC
-      hive.allow-drop-table=true
     iceberg: |-
       connector.name=iceberg
       iceberg.catalog.type=nessie
-      hive.metastore.uri=http://nessie.nessie.svc.cluster.local:19120
+      iceberg.nessie-catalog.uri=http://nessie.nessie.svc.cluster.local:19120/api/v1
+      iceberg.nessie-catalog.default-warehouse-dir=/tmp
       hive.s3.path-style-access=true
       hive.s3.endpoint=http://minio.minio.svc.cluster.local:9000
       hive.s3.aws-access-key=${ENV:MINIO_ACCESS_KEY}
