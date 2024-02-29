@@ -12,46 +12,6 @@ trino:
     tag: 432
   server:
     workers: 1
-  coordinator:
-    resources:
-      limits: 
-        cpu: 1000m
-        memory: 1000Mi
-      requests:
-        cpu: 100m
-        memory: 125Mi
-    livenessProbe: 
-      initialDelaySeconds: 180
-      periodSeconds: 10
-      timeoutSeconds: 5
-      failureThreshold: 6
-      successThreshold: 1
-    readinessProbe:
-      initialDelaySeconds: 180
-      periodSeconds: 10
-      timeoutSeconds: 5
-      failureThreshold: 6
-      successThreshold: 1
-  worker:
-    resources:
-      limits: 
-        cpu: 1000m
-        memory: 1000Mi
-      requests:
-        cpu: 100m
-        memory: 125Mi
-    livenessProbe: 
-      initialDelaySeconds: 180
-      periodSeconds: 10
-      timeoutSeconds: 5
-      failureThreshold: 6
-      successThreshold: 1
-    readinessProbe:
-        initialDelaySeconds: 180
-        periodSeconds: 10
-        timeoutSeconds: 5
-        failureThreshold: 6
-        successThreshold: 1
   additionalCatalogs:
     kafka: |-
       connector.name=kafka
