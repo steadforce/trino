@@ -1,11 +1,17 @@
 trino:
   coordinator:
+    jvm:
+      # must be lower than the coordinator's memory limit
+      maxHeapSize: "1G"
     resources:
       limits:
         cpu: 0m
         memory: 1536Mi
       requests: ~
   worker:
+    jvm:
+      # must be lower than the coordinator's memory limit
+      maxHeapSize: "1G"
     resources:
       limits:
         cpu: 0m
