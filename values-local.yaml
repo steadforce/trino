@@ -3,7 +3,7 @@ trino:
     resources:
       limits:
         cpu: 0m
-        memory: 1024Mi
+        memory: 1536Mi
       requests: ~
   worker:
     resources:
