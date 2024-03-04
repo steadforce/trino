@@ -1,0 +1,13 @@
+trino:
+  coordinator:
+    resources:
+      limits:
+        cpu: 0m
+        memory: 1024Mi
+      requests: ~
+  worker:
+    resources:
+      limits:
+        cpu: 0m
+        memory: 1024Mi
+      requests: ~
