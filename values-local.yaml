@@ -2,6 +2,7 @@ trino:
   coordinator:
     config:
       query:
+        # must be lower than the coordinator's jvm heap
         maxMemoryPerNode: 512MB
     jvm:
       # must be lower than the coordinator's memory limit
@@ -14,6 +15,7 @@ trino:
   worker:
     config:
       query:
+        # must be lower than the worker's jvm heap
         maxMemoryPerNode: 512MB
     jvm:
       # must be lower than the coordinator's memory limit
