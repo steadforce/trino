@@ -1,17 +1,24 @@
 trino:
   coordinator:
+    config:
+      query:
+        maxMemoryPerNode: 512MB
     jvm:
       # must be lower than the coordinator's memory limit
-      maxHeapSize: "1G"
+      maxHeapSize: 1G
     resources:
       limits:
         cpu: 0m
         memory: 1536Mi
       requests: ~
   worker:
+    config:
+      query:
+        maxMemoryPerNode: 512MB
     jvm:
       # must be lower than the coordinator's memory limit
-      maxHeapSize: "1G"
+      # maxMemoryPerNode + heapHeadroomPerNode
+      maxHeapSize: 1G
     resources:
       limits:
         cpu: 0m
