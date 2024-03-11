@@ -9,7 +9,7 @@ subDomain: trino
 
 trino:
   image:
-    tag: 432
+    tag: 440
   server:
     workers: 1
   additionalCatalogs:
