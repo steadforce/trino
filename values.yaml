@@ -22,7 +22,7 @@ trino:
       connector.name=iceberg
       iceberg.catalog.type=nessie
       iceberg.nessie-catalog.uri=http://nessie.nessie.svc.cluster.local:19120/api/v1
-      iceberg.nessie-catalog.default-warehouse-dir=s3a://steadforce/iceberg
+      iceberg.nessie-catalog.default-warehouse-dir=s3://steadops-playground-bucket
       iceberg.nessie-catalog.ref=main
       iceberg.register-table-procedure.enabled=true
       iceberg.file-format=PARQUET
