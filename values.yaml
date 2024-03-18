@@ -26,6 +26,7 @@ trino:
       iceberg.nessie-catalog.ref=main
       iceberg.register-table-procedure.enabled=true
       iceberg.file-format=PARQUET
+      iceberg.unique-table-location=false
       fs.native-s3.enabled=true
       s3.path-style-access=true
       s3.endpoint=http://minio.minio.svc.cluster.local:80
