@@ -22,13 +22,12 @@ trino:
       connector.name=iceberg
       iceberg.catalog.type=nessie
       iceberg.nessie-catalog.uri=http://nessie.nessie.svc.cluster.local:19120/api/v1
-      iceberg.nessie-catalog.default-warehouse-dir=s3://steadops-playground-bucket
+      iceberg.nessie-catalog.default-warehouse-dir=s3://steadops-playground-bucket/steadops-playground-bucket
       iceberg.nessie-catalog.ref=main
       iceberg.register-table-procedure.enabled=true
       iceberg.file-format=PARQUET
       iceberg.unique-table-location=false
       fs.native-s3.enabled=true
-      s3.path-style-access=true
       s3.endpoint=http://minio.minio.svc.cluster.local:80
       s3.aws-access-key=${ENV:MINIO_ACCESS_KEY}
       s3.aws-secret-key=${ENV:MINIO_SECRET_KEY}
